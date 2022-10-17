@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Todo tests">
+
+
+    <listeners>
+        <listener class-name="com.todo.util.TestListener" />
+        <listener class-name="com.todo.util.ExtentReporter" />
+    </listeners>
+
+
+
+    <test name="Todo Tests On Chrome">
+        <parameter name="browser"  value="chrome"/>
+        <parameter name="mode"  value="headless"/>
+        <classes>
+            <class name="com.todo.tests.TodoTests" />
+            <class name="com.todo.tests.NegativeTests" />
+        </classes>
+    </test>
+
+</suite>
